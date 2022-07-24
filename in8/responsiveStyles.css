@@ -1,0 +1,184 @@
+/*MOBILE*/
+#menuToggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media screen and (max-width:600px) {
+  .caracter {
+    visibility: hidden;
+  }
+  .topo{
+    display: none;
+  }
+  .header {
+    background-image: url(imgs/index-image-mobile.jpg);
+    height: 1636px;
+    width: 1080px;
+  }
+
+  .cadastro {
+    height: 700px;
+    width: 1080px;
+  }
+
+  .listaCadastros {
+    height: 600px;
+    width: 1080px;
+  }
+
+  .footer {
+    background-image: url(imgs/rodape-mobile.jpg);
+    height: 334px;
+    width: 1080px;
+  }
+
+  .lista {
+    margin-left: 12rem;
+  }
+
+  table {
+    width: 60%;
+  }
+
+  .logo-box {
+    float: right;
+    margin-right: 150px;
+  }
+
+  nav {
+    display: absolute;
+    width: 60%;
+    height: 40%;
+  }
+
+  .header ul {
+    display: flex;
+    position: fixed;
+    flex-wrap: wrap;
+    align-content: center;
+    top: 0px;
+    left: 0px;
+    width: 60%;
+    height: 0%;
+    background-color: #29abe2;
+    overflow: hidden;
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    -o-transition: height 0.3s;
+    transition: height 0.3s;
+  }
+
+  .header li {
+    display: block;
+    width: 100%;
+    margin-left: 10rem;
+    font-size: 50px;
+  }
+
+  .header li a {
+    display: block;
+    width: 100%;
+  }
+
+  .menu-icon {
+    display: inline;
+    color: #29abe2;
+    height: inherit;
+    position: absolute;
+    top: 15px;
+    left: 10rem;
+    z-index: 999;
+  }
+
+  .menu-icon:hover {
+    color: white;
+  }
+
+  .menu-icon i {
+    font-size: 5em;
+  }
+
+  #menuToggle:checked~ul {
+    height: 40%;
+  }
+
+  .estagio {
+    margin-left: 18rem;
+  }
+
+  .prova {
+    margin-left: 18rem;
+  }
+}
+/*TABLET*/
+@media screen and (min-width:601px) and (max-width:1024px) {
+  .caracter {
+    visibility: hidden;
+  }
+
+  .logo-box {
+    float: right;
+    margin-right: 150px;
+  }
+
+  nav {
+    display: absolute;
+    width: 50%;
+    height: 20%;
+  }
+
+  .header ul {
+    display: flex;
+    position: fixed;
+    flex-wrap: wrap;
+    align-content: center;
+    top: 0px;
+    left: 0px;
+    width: 50%;
+    height: 0%;
+    background-color: #29abe2;
+    overflow: hidden;
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    -o-transition: height 0.3s;
+    transition: height 0.3s;
+  }
+
+  .header li {
+    display: block;
+    width: 100%;
+    margin-left: 10rem;
+    font-size: 50px;
+  }
+
+  .header li a {
+    display: block;
+    width: 100%;
+  }
+
+  .menu-icon {
+    display: inline;
+    color: #29abe2;
+    height: inherit;
+    position: absolute;
+    top: 15px;
+    left: 10rem;
+    z-index: 999;
+  }
+
+
+  .menu-icon i {
+    font-size: 5em;
+  }
+
+  #menuToggle:checked~ul {
+    height: 20%;
+  }
+  .topo{
+    display: none;
+  }
+}

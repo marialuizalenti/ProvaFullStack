@@ -1,0 +1,240 @@
+@font-face {
+  font-family: helveticaReg;
+  src: url(Fonts/helvetica-25-ultra-light.otf);
+}
+
+@font-face {
+  font-family: roboto regular;
+  src: url(Fonts/Roboto-Regular_0.ttf);
+}
+
+@font-face {
+  font-family: robotoLig;
+  src: url(Fonts/Roboto-Light_0.ttf);
+}
+
+@font-face {
+  font-family: helveticaCond;
+  src: url(Fonts/ps.ttf);
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  background-image: url(imgs/index-image.jpg);
+  height: 940px;
+  width: 1900px;
+}
+.caracter{
+  font-size: 10px;
+}
+header {
+  padding: 20px 0;
+}
+
+.container {
+  padding: 0 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.logo-box {
+  float: left;
+  margin-right: 20px;
+  margin-top: 15px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 25px;
+  height: 70px;
+  line-height: 70px;
+  transition: .5s linear;
+  font-family: roboto regular;
+  font-size: medium;
+  color: white;
+}
+
+nav a {
+  text-decoration: none;
+  display: block;
+  position: relative;
+  color: white;
+}
+
+nav a:after {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 15px;
+  background: white;
+  transition: width .5s linear;
+}
+
+nav a:hover:after {
+  width: 100%;
+}
+
+.estagio {
+  margin-left: 29rem;
+  margin-top: 16rem;
+  font-family: helveticaReg;
+  color: white;
+  font-size: 100px;
+}
+
+.prova {
+  margin-left: 29rem;
+  font-family: helveticaReg;
+  color: white;
+  font-size: 43px;
+  letter-spacing: 1px;
+  word-spacing: -5px;
+}
+
+.cadastro {
+  background-color: #29abe2;
+  height: 700px;
+  width: 1900px;
+  border-top: solid 1px white;
+}
+
+.cad {
+  margin: 4rem;
+}
+
+.listaCadastros {
+  background-color: white;
+  height: 600px;
+  width: 1900px;
+  margin-top: 2rem;
+}
+
+footer {
+  color: white;
+  font-family: robotoLig;
+  text-align: center;
+  padding-top: 6rem;
+}
+
+.footer {
+  background-image: url(imgs/rodape-desktop.jpg);
+  height: 334px;
+  width: 1900px;
+}
+
+
+.header .logo {
+  max-width: 150px;
+}
+
+.header ul {
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  align-items: center;
+  font-size: 14px;
+}
+
+h1 {
+  font-family: helveticaReg;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+label {
+  display: block;
+  font-family: roboto regular;
+  color: white;
+  margin-top: 10px;
+  font-size: small;
+  margin-bottom: 10px;
+}
+
+input {
+  display: block;
+  border: none;
+  background-color: #29abe2;
+  color: white;
+  font-family: helveticaCond;
+  font-size: 20px;
+  border-bottom: 1px solid white;
+  padding-right: 15em;
+}
+
+.nascimento {
+  padding-right: 18.5em;
+ 
+}
+.nascimento input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+form {
+  margin: auto;
+  width: 500px;
+  margin-top: 100px;
+}
+
+input.cadastrar {
+  background-color: #012d51;
+  font-family: helveticaReg;
+  color: #29abe2;
+  font-size: 50px;
+  border: none;
+  padding: 0.10em 0.9em;
+  cursor: pointer;
+  margin-top: 70px;
+}
+form .btn{
+  margin-left: 4rem;
+}
+table {
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  border-collapse: collapse;
+  border-style: hidden;
+}
+
+th,
+td {
+  border-collapse: collapse;
+  border: 1px solid #29abe2;
+  border-collapse: collapse;
+  border: 1px solid #29abe2;
+}
+
+th {
+  color: #012d51;
+  font-family: roboto regular;
+  font-size: 20px;
+}
+
+tr {
+  color: #808080;
+  font-family: helveticaReg;
+  font-size: 20px;
+}
+.lista{
+  margin-top: 6rem;
+  margin-left: 30rem;
+}
+.topo{
+  margin-left: 100rem;
+  margin-top: 8rem;
+}
