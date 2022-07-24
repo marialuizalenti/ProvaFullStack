@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS-->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="responsiveStyles.css" />
+    <!--ICONE-->
+    <script src="https://kit.fontawesome.com/6131a377dc.js" crossorigin="anonymous"></script>    <title>IN8</title>
+</head>
+
+<body>
+    <!--SCRIPT-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#cadastro').submit(function(){
+		var $this = $( this );
+
+		var nome = $this.find("input[name='nome']").val(),
+			email = $this.find("input[name='email']").val(),
+			nascimento = $this.find("input[name='nascimento']").val();
+			telefone = $this.find("input[name='telefone']").val();
+			
+
+
+		var tr = '<tr>'+
+			'<td>'+nome+'</td>'+
+			'<td>'+email+'</td>'+
+			'<td>'+nascimento+'</td>'+
+			'<td>'+telefone+'</td>'
+			
+			'</tr>'
+		$('#listaCadastros').find('tbody').append( tr );
+
+		var hiddens = '<input type="hidden" name="nome[]" value="'+nome+'" />'+
+			'<input type="hidden" name="email[]" value="'+email+'" />'+
+			'<input type="hidden" name="nascimento[]" value="'+nascimento+'" />'+
+			'<input type="hidden" name="telefone[]" value="'+telefone+'" />';
+
+		return false;
+	});
+});
+</script>
+
+<script>
+    function mudaCor(){
+        var corAtual = document.getElementById("menu-icon-label").style.color
+        if(corAtual=="white")
+        document.getElementById("menu-icon-label").style.color="#29abe2";
+        else
+        document.getElementById("menu-icon-label").style.color="white";     
+    }
+</script>
+
+    <!--BLOCO HEADER-->
+    <div class="header">
+        <header>
+            <div class="container">
+                <div class="logo-box">
+                    <img src="imgs/logo-in8-dev.png">
+                </div>
+                <nav>
+                    <input onclick="mudaCor()" type="checkbox" id="menuToggle">
+                    <label for="menuToggle" id="menu-icon-label" class="menu-icon">
+                        <i class="fa-solid fa-bars"></i>
+                    </label>
+                    <ul>
+                        <li><a href="#cadastro">cadastro</a></li>
+                        <li class="caracter">⬤</li>
+                        <li><a href="#listaCadastros">lista</a></li>
+                        <li class="caracter">⬤</li>
+                        <li><a href="#footer">sobre mim</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+            <div class="estagio">ESTÁGIO</div>
+            <div class="prova">PROVA DE SELEÇÃO</div>
+        </header>
+
+    </div>
+<!--MÁSCARA FORMATAÇÃO TELEFONE-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <!--BLOCO CADASTRO-->
+    <div id="cadastro" class="cadastro">
+        <section>
+            <div class="cad">
+                <h1>CADASTRO</h1>
+                <form name="cad" method="post">
+                    <label for="nome">Nome</label>
+                    <input type="text" class="nome" name="nome" maxlength="50" required>
+                    <label for="email">E-mail</label>
+                    <input type="email" class="email" name="email" required>
+                    <label for="nascimento">Nascimento</label>
+                    <input type="date" class="nascimento" name="nascimento" required>
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" class="telefone" name="telefone" onkeypress="$(this).mask('(00) 9 0000-0000')" required>
+                    <div class="btn"><input type="submit" class="cadastrar" value="CADASTRAR"></div> 
+                </form>
+            </div>
+        </section>
+    </div>
+
+
+    <!--BLOCO LISTA DE CADASTROS-->
+    <div id="listaCadastros" class="listaCadastros">
+        <section>
+            <h1 style="color: #29abe2">LISTA DE CADASTROS</h1>
+                <table class="lista" id="lista">
+                <thead>
+                    <tr>
+                        <th>NOME</th>
+                        <th>E-MAIL</th>
+                        <th>NASCIMENTO</th>
+                        <th>TELEFONE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Maria Luiza Sales Lenti</td>
+                        <td>marialuiza@gmail.com</td>
+                        <td>22.06.2001</td>
+                        <td>31 9 9999 - 4444</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+
+    <!--BLOCO RODAPÉ-->
+    <div id="footer" class="footer">
+        <footer>
+                <p>Maria Luiza Sales Lenti</p>
+                <p>marialuiza@gmail.com</p>
+                <p>(31) 9 9999 - 4444</p>
+                <p>PUC MG</p>   
+        </footer>
+    </div>
+
+</body>
+
+</html>
