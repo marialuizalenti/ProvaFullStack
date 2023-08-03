@@ -33,8 +33,5 @@ Prova processo seletivo da IN8
 
 
 
-******Para melhor visualização, retirar zoom nas versões tablet e mobile.
-
-
 
 
